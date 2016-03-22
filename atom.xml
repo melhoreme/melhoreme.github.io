@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.melhore.me/"/>
-  <updated>2016-03-22T03:09:22.564Z</updated>
+  <updated>2016-03-22T03:12:05.888Z</updated>
   <id>http://blog.melhore.me/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/"/>
     <id>http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/</id>
     <published>2016-03-22T01:22:37.000Z</published>
-    <updated>2016-03-22T03:09:22.564Z</updated>
+    <updated>2016-03-22T03:12:05.888Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-logo.png&quot; alt=&quot;ScreenShot&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Static-Site-Generators&quot;&gt;&lt;a href=&quot;#Static-Site-Generators&quot; class=&quot;headerlink&quot; title=&quot;Static Site Generators&quot;&gt;&lt;/a&gt;Static Site Generators&lt;/h2&gt;&lt;p&gt;Antes das minhas atenções estarem voltadas aos badalados “Static Site Generators”, para criação de blogs geralmente baseados em &lt;a href=&quot;http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown&lt;/a&gt;, eu utilizava o velho Wordpress. Já vinha há um tempo saturado da plataforma, e agora finalmente pude voltar um pouco da minha atenção à eles.&lt;/p&gt;
 &lt;p&gt;Os generators fornecem todo o controle que você precisa para criar, gerenciar e, claro… gerar artefatos para o seu blog, via &lt;a href=&quot;https://hexo.io/docs/commands.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;linha de comando&lt;/a&gt;.&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new &lt;span class=&quot;string&quot;&gt;&quot;Post metalinguístico sobre Hexo&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;Lista de outros Static Generators: (&lt;a href=&quot;https://www.staticgen.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.staticgen.com&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Lista mais completas dos Static Generators, caso tenha curiosidade: &lt;a href=&quot;https://www.staticgen.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.staticgen.com&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Hexo&quot;&gt;&lt;a href=&quot;#Hexo&quot; class=&quot;headerlink&quot; title=&quot;Hexo&quot;&gt;&lt;/a&gt;Hexo&lt;/h2&gt;&lt;p&gt;Olhei e testei repidamente alguns, com o critério inicial que rodasse em Node.js. Dentre eles principalmente o Heckle (Jekyll pra Node, ao invés de Ruby) e Poet, além do próprio &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo.io&lt;/a&gt;. Optei pelo último por parecer mais maduro, robusto, e atualmente possuir um constante ciclo de releases. &lt;/p&gt;
 &lt;h2 id=&quot;Pros&quot;&gt;&lt;a href=&quot;#Pros&quot; class=&quot;headerlink&quot; title=&quot;Prós&quot;&gt;&lt;/a&gt;Prós&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-themes.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Possui um bom suporte a &lt;a href=&quot;https://hexo.io/themes/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;temas&lt;/a&gt; e &lt;a href=&quot;https://hexo.io/docs/plugins.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;plugins&lt;/a&gt; de terceiros, open source. Além de poder incluir novas features, ele é 100% customizável, de fácil alteração e manuseio através do fonte. E como falei, em constantes releases.&lt;/p&gt;
