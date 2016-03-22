@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.melhore.me/"/>
-  <updated>2016-03-21T01:20:08.775Z</updated>
+  <updated>2016-03-22T01:33:26.313Z</updated>
   <id>http://blog.melhore.me/</id>
   
   <author>
@@ -16,11 +16,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo: Framework Blog para Node.js</title>
+    <link href="http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/"/>
+    <id>http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/</id>
+    <published>2016-03-22T01:22:37.000Z</published>
+    <updated>2016-03-22T01:33:26.313Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;Static-Site-Generators&quot;&gt;&lt;a href=&quot;#Static-Site-Generators&quot; class=&quot;headerlink&quot; title=&quot;Static Site Generators&quot;&gt;&lt;/a&gt;Static Site Generators&lt;/h2&gt;&lt;p&gt;Antes das minhas atenções estarem voltadas aos badalados “Static Site Generators”, para criação de blogs geralmente baseados em Markdown, eu utilizava o velho Wordpress. Já vinha um tempo saturado da plataforma, e agora finalmente pude voltar minha atenção.&lt;/p&gt;
+&lt;p&gt;Os generators fornecem todo o controle que você precisa para criar, gerenciar e, claro… gerar artefatos para o seu blog, via &lt;a href=&quot;https://hexo.io/docs/commands.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;linha de comando&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new &lt;span class=&quot;string&quot;&gt;&quot;Post metalinguístico sobre Hexo&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Hexo&quot;&gt;&lt;a href=&quot;#Hexo&quot; class=&quot;headerlink&quot; title=&quot;Hexo&quot;&gt;&lt;/a&gt;Hexo&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;hexo-logo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Olhei e testei repidamente alguns, com o critério inicial que rodasse em Node.js. Dentre eles principalmente o Heckle (Jekyll pra Node, ao invés de Ruby) e Poet, além do próprio &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo.io&lt;/a&gt;. Optei pelo último por parecer mais maduro, robusto, e atualmente possuir um constante ciclo de updates. &lt;/p&gt;
+&lt;h2 id=&quot;Pros&quot;&gt;&lt;a href=&quot;#Pros&quot; class=&quot;headerlink&quot; title=&quot;Prós&quot;&gt;&lt;/a&gt;Prós&lt;/h2&gt;&lt;p&gt;Possui um bom suporte a &lt;a href=&quot;https://hexo.io/docs/themes.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;temas&lt;/a&gt; e &lt;a href=&quot;https://hexo.io/docs/plugins.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;plugins&lt;/a&gt; de terceiros, open source. Além de poder incluir novas features, ele é 100% customizável, de fácil alteração e manutenção do fonte. E como falei, em constantes releases.&lt;/p&gt;
+&lt;h2 id=&quot;Contra&quot;&gt;&lt;a href=&quot;#Contra&quot; class=&quot;headerlink&quot; title=&quot;Contra&quot;&gt;&lt;/a&gt;Contra&lt;/h2&gt;&lt;p&gt;Mas como nem tudo são flores, ressalto um nítido inconveniente. Ele tem um apelo muito grande na China. Embora o código fonte, documentação oficial etc, seja toda em inglês, existe uma comunidade ativa muito grande na web, entre os chineses. Como vimos nas aulas de Geografia (ou não) chineses não se preocupam lá tanto em utilizar a língua inglesa, como por exemplo nós brasileiros fazemos. Isto se não for pelo contrário, realmente fazem questão de não usar, utilizando por sua vez ideogramas (谷歌翻譯). Enfim, isto acarretou em não raras vezes que eu googleei algo relacionado e me deparei com alguns ideogramas, ou mesmo em meio à comentários do fonte de algum plugin ou tema. No entanto, a aplicação é simples, é provável que você nem vá precisar traduzir algo ou tentar ler, mas em útlimo caso, pode apelar ao google translate.&lt;/p&gt;
+&lt;h2 id=&quot;Nuvem&quot;&gt;&lt;a href=&quot;#Nuvem&quot; class=&quot;headerlink&quot; title=&quot;Nuvem&quot;&gt;&lt;/a&gt;Nuvem&lt;/h2&gt;&lt;p&gt;Alguns plugins, são facilidades de deploy, eu estou hospedando no próprio Github e configurei o Hexo pra fazer o deploy direto lá, também para Heoroku, OpenShift, S3 da Amazon &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;entre outros&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Lista-de-outros-Static-Generators&quot;&gt;&lt;a href=&quot;#Lista-de-outros-Static-Generators&quot; class=&quot;headerlink&quot; title=&quot;Lista de outros Static Generators&quot;&gt;&lt;/a&gt;Lista de outros Static Generators&lt;/h2&gt;&lt;p&gt;(&lt;a href=&quot;https://www.staticgen.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.staticgen.com&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Bem cruzando prós e contras, eu optei pelo Hexo, claro que ainda é cedo para uma conclusão definitiva, mas pelo menos comparado ao Wordpress que eu costumava usar, já é possível notar, sem restícios de dúvidas alguma que é muito melhor, ágil e divertido trabalhar com aplicação Javascript ao invés de PHP, e que disponibiliza ferramentas, para que possamos manipular tudo via linha de comando, através do Node.js, que certamente você já tem aí, instalado em sua máquina =D&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Static-Site-Generators&quot;&gt;&lt;a href=&quot;#Static-Site-Generators&quot; class=&quot;headerlink&quot; title=&quot;Static Site Generators&quot;&gt;&lt;/a&gt;Static Site Generato
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://blog.melhore.me/tags/javascript/"/>
+    
+      <category term="hexo" scheme="http://blog.melhore.me/tags/hexo/"/>
+    
+      <category term="blog" scheme="http://blog.melhore.me/tags/blog/"/>
+    
+      <category term="node.js" scheme="http://blog.melhore.me/tags/node-js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="http://blog.melhore.me/2016/03/20/hello-world/"/>
-    <id>http://blog.melhore.me/2016/03/20/hello-world/</id>
-    <published>2016-03-21T01:20:08.839Z</published>
-    <updated>2016-03-21T01:20:08.775Z</updated>
+    <link href="http://blog.melhore.me/2016/03/21/hello-world/"/>
+    <id>http://blog.melhore.me/2016/03/21/hello-world/</id>
+    <published>2016-03-21T21:56:06.971Z</published>
+    <updated>2016-03-21T21:56:06.919Z</updated>
     
     <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//Construtor&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Exemplo&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.propriedade = &lt;span class=&quot;string&quot;&gt;&#39;Isso é uma propriedade.&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.metodo = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;Isso é um metódo&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; objeto = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Exemplo(); &lt;span class=&quot;comment&quot;&gt;//Instância do construtor &quot;Exemplo&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//Alerta os respectivos textos na tela&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;alert( objeto.propriedade ),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;alert( objeto.metodo() );&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -41,6 +77,10 @@
     </summary>
     
     
+      <category term="javascript" scheme="http://blog.melhore.me/tags/javascript/"/>
+    
+      <category term="node.js" scheme="http://blog.melhore.me/tags/node-js/"/>
+    
   </entry>
   
   <entry>
@@ -48,7 +88,7 @@
     <link href="http://blog.melhore.me/2016/03/20/Projeto-de-Post/"/>
     <id>http://blog.melhore.me/2016/03/20/Projeto-de-Post/</id>
     <published>2016-03-20T22:10:31.000Z</published>
-    <updated>2016-03-20T22:10:31.558Z</updated>
+    <updated>2016-03-21T21:55:21.558Z</updated>
     
     <content type="html"></content>
     
@@ -56,6 +96,10 @@
     
     </summary>
     
+    
+      <category term="javascript" scheme="http://blog.melhore.me/tags/javascript/"/>
+    
+      <category term="node.js" scheme="http://blog.melhore.me/tags/node-js/"/>
     
   </entry>
   
