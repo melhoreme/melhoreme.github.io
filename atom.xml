@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.melhore.me/"/>
-  <updated>2016-03-22T03:12:05.888Z</updated>
+  <updated>2016-03-22T17:24:20.603Z</updated>
   <id>http://blog.melhore.me/</id>
   
   <author>
@@ -16,11 +16,77 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Angular Material: Aprendendo através da prática</title>
+    <link href="http://blog.melhore.me/2016/03/22/Angular-Material-Aprendendo-atraves-da-pratica/"/>
+    <id>http://blog.melhore.me/2016/03/22/Angular-Material-Aprendendo-atraves-da-pratica/</id>
+    <published>2016-03-22T16:45:48.000Z</published>
+    <updated>2016-03-22T17:24:20.603Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/2016/03/22/Angular-Material-Aprendendo-atraves-da-pratica/angular-material-top.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Esta é uma postagem sobre minha apresentação, na qual tive a finalidade e o cuidado em demonstrar, com bastante prática alguns dos principais conceitos que regem o Angular Material, e ao fim, ter uma simples, porém funcional página de protótipo. Demonstrando como que é possível (em minutos, no caso) apresentar algo muito fiel ao produto final, ao mesmo passo que salva bastante do seu tempo, por poder reaproveitar todo o código do protótipo, na etapa de desenvolvimento.&lt;/p&gt;
+&lt;p&gt;O repositório está em meu github: &lt;a href=&quot;https://github.com/rauleite/angular-material-prototipo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/rauleite/angular-material-prototipo&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Workshop-Angular-Material&quot;&gt;&lt;a href=&quot;#Workshop-Angular-Material&quot; class=&quot;headerlink&quot; title=&quot;Workshop Angular Material&quot;&gt;&lt;/a&gt;Workshop Angular Material&lt;/h1&gt;&lt;p&gt;Descobrindo na prática porque desenvolvedores e clientes ficam mais felizes com Angular Material  ｡◕‿‿◕｡&lt;/p&gt;
+&lt;h2 id=&quot;Step-0-Preparando-ambiente&quot;&gt;&lt;a href=&quot;#Step-0-Preparando-ambiente&quot; class=&quot;headerlink&quot; title=&quot;Step 0 - Preparando ambiente&quot;&gt;&lt;/a&gt;Step 0 - Preparando ambiente&lt;/h2&gt;&lt;p&gt;Caso ainda não tenha o Node Package Manager instalado: &lt;br&gt;&lt;br&gt;&lt;a href=&quot;https://nodejs.org/en/download/package-manager&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://nodejs.org/en/download/package-manager&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;ou para instalar com Node Virtual Manager: &lt;br&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/creationix/nvm#install-script&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/creationix/nvm#install-script&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;ps. talvez precise usar o npm como super user (como ‘sudo npm’);&lt;/em&gt; &lt;br&gt;&lt;br&gt;&lt;em&gt;(embora não seja recomendado não interfere nos propósitos deste tutorial)&lt;/em&gt; &lt;/p&gt;
+&lt;h4 id=&quot;Clonando-o-projeto&quot;&gt;&lt;a href=&quot;#Clonando-o-projeto&quot; class=&quot;headerlink&quot; title=&quot;Clonando o projeto&quot;&gt;&lt;/a&gt;Clonando o projeto&lt;/h4&gt;&lt;p&gt;&lt;code&gt;git clone https://github.com/raul010/angular-material-prototipo.git&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd angular-material-prototipo&lt;/code&gt; &lt;/p&gt;
+&lt;h4 id=&quot;Install-Dependencies&quot;&gt;&lt;a href=&quot;#Install-Dependencies&quot; class=&quot;headerlink&quot; title=&quot;Install Dependencies&quot;&gt;&lt;/a&gt;Install Dependencies&lt;/h4&gt;&lt;p&gt;&lt;code&gt;npm install&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&quot;Start-Server&quot;&gt;&lt;a href=&quot;#Start-Server&quot; class=&quot;headerlink&quot; title=&quot;Start Server&quot;&gt;&lt;/a&gt;Start Server&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm start&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* Listening port 3000...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Abra: &lt;a href=&quot;http://localhost:3000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:3000&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pronto, você já tem o projeto inteiro em mãos. Agora se quiser ir observando o&lt;br&gt;passo a passo, com mais calma, basta ir dando o chekout e observando o&lt;br&gt;que foi incluído. Conforme os passos mais abaixo.&lt;/p&gt;
+&lt;p&gt;Qualquer dúvida, ou feedback é bem vindo:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;mailto:raul@melhoreme.me?Subject=WS_ng-Material&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;raul@melhore.me&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/rauleite&quot; title=&quot;Meu Twitter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@rauleite&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linkedin.com/in/rauleite&quot; title=&quot;Meu Linkedin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;in/rauleite&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Step-1-Hello-Angular&quot;&gt;&lt;a href=&quot;#Step-1-Hello-Angular&quot; class=&quot;headerlink&quot; title=&quot;Step 1 - Hello Angular&quot;&gt;&lt;/a&gt;Step 1 - Hello Angular&lt;/h2&gt;&lt;p&gt;&lt;code&gt;git checkout -f step-001&lt;/code&gt; &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm start&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* Listening port 3000...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Abra: &lt;a href=&quot;http://localhost:3000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:3000&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Step-2-Hello-Angular-Material-Toolbar&quot;&gt;&lt;a href=&quot;#Step-2-Hello-Angular-Material-Toolbar&quot; class=&quot;headerlink&quot; title=&quot;Step 2 - Hello Angular Material - Toolbar&quot;&gt;&lt;/a&gt;Step 2 - Hello Angular Material - Toolbar&lt;/h2&gt;&lt;p&gt;Mesmos passos, apenas alternado de ‘step-001’, para ‘step-002’:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git checkout -f step-002&lt;/code&gt; &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm start&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* Listening port 3000...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Step-3-Tema&quot;&gt;&lt;a href=&quot;#Step-3-Tema&quot; class=&quot;headerlink&quot; title=&quot;Step 3 - Tema&quot;&gt;&lt;/a&gt;Step 3 - Tema&lt;/h2&gt;&lt;p&gt;&lt;code&gt;git checkout -f step-003&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npm start&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Step-4-Layout&quot;&gt;&lt;a href=&quot;#Step-4-Layout&quot; class=&quot;headerlink&quot; title=&quot;Step 4 - Layout&quot;&gt;&lt;/a&gt;Step 4 - Layout&lt;/h2&gt;&lt;p&gt;&lt;code&gt;git checkout -f step-004&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npm start&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Step-5-Resposividade&quot;&gt;&lt;a href=&quot;#Step-5-Resposividade&quot; class=&quot;headerlink&quot; title=&quot;Step 5 - Resposividade&quot;&gt;&lt;/a&gt;Step 5 - Resposividade&lt;/h2&gt;&lt;p&gt;&lt;code&gt;git checkout -f step-005&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npm start&lt;/code&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2016/03/22/Angular-Material-Aprendendo-atraves-da-pratica/angular-material-top.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Esta é uma postagem sobre m
+    
+    </summary>
+    
+      <category term="Javascript" scheme="http://blog.melhore.me/categories/Javascript/"/>
+    
+      <category term="Front-end" scheme="http://blog.melhore.me/categories/Javascript/Front-end/"/>
+    
+      <category term="Web Components" scheme="http://blog.melhore.me/categories/Javascript/Front-end/Web-Components/"/>
+    
+    
+      <category term="angular" scheme="http://blog.melhore.me/tags/angular/"/>
+    
+      <category term="angular material" scheme="http://blog.melhore.me/tags/angular-material/"/>
+    
+      <category term="material design" scheme="http://blog.melhore.me/tags/material-design/"/>
+    
+      <category term="javascript" scheme="http://blog.melhore.me/tags/javascript/"/>
+    
+      <category term="html5" scheme="http://blog.melhore.me/tags/html5/"/>
+    
+      <category term="css3" scheme="http://blog.melhore.me/tags/css3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo: Framework Blog para Node.js</title>
     <link href="http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/"/>
     <id>http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/</id>
     <published>2016-03-22T01:22:37.000Z</published>
-    <updated>2016-03-22T03:12:05.888Z</updated>
+    <updated>2016-03-22T17:18:26.146Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-logo.png&quot; alt=&quot;ScreenShot&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Static-Site-Generators&quot;&gt;&lt;a href=&quot;#Static-Site-Generators&quot; class=&quot;headerlink&quot; title=&quot;Static Site Generators&quot;&gt;&lt;/a&gt;Static Site Generators&lt;/h2&gt;&lt;p&gt;Antes das minhas atenções estarem voltadas aos badalados “Static Site Generators”, para criação de blogs geralmente baseados em &lt;a href=&quot;http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown&lt;/a&gt;, eu utilizava o velho Wordpress. Já vinha há um tempo saturado da plataforma, e agora finalmente pude voltar um pouco da minha atenção à eles.&lt;/p&gt;
@@ -44,6 +110,12 @@
 &lt;h2 id=&quot;Static-Site-Generators&quot;&gt;&lt;a href=&quot;#Stat
     
     </summary>
+    
+      <category term="Javascript" scheme="http://blog.melhore.me/categories/Javascript/"/>
+    
+      <category term="Full-stack" scheme="http://blog.melhore.me/categories/Javascript/Full-stack/"/>
+    
+      <category term="Node.js" scheme="http://blog.melhore.me/categories/Javascript/Full-stack/Node-js/"/>
     
     
       <category term="javascript" scheme="http://blog.melhore.me/tags/javascript/"/>

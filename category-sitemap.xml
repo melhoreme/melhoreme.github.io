@@ -1,64 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://blog.melhore.me</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
 
     <url>
-        <loc>http://blog.melhore.me/tags/hexo/</loc>
+        <loc>http://blog.melhore.me/categories/Javascript/Full-stack/</loc>
         <lastmod>2016-03-22T17:18:26.146Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://blog.melhore.me/tags/blog/</loc>
+        <loc>http://blog.melhore.me/categories/Javascript/Full-stack/Node-js/</loc>
         <lastmod>2016-03-22T17:18:26.146Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://blog.melhore.me/tags/node-js/</loc>
-        <lastmod>2016-03-22T17:18:26.146Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://blog.melhore.me/tags/angular/</loc>
+        <loc>http://blog.melhore.me/categories/Javascript/</loc>
         <lastmod>2016-03-22T17:24:20.603Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://blog.melhore.me/tags/angular-material/</loc>
+        <loc>http://blog.melhore.me/categories/Javascript/Front-end/</loc>
         <lastmod>2016-03-22T17:24:20.603Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://blog.melhore.me/tags/material-design/</loc>
-        <lastmod>2016-03-22T17:24:20.603Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://blog.melhore.me/tags/javascript/</loc>
-        <lastmod>2016-03-22T17:24:20.603Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://blog.melhore.me/tags/html5/</loc>
-        <lastmod>2016-03-22T17:24:20.603Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://blog.melhore.me/tags/css3/</loc>
+        <loc>http://blog.melhore.me/categories/Javascript/Front-end/Web-Components/</loc>
         <lastmod>2016-03-22T17:24:20.603Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

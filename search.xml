@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title><![CDATA[Angular Material: Aprendendo através da prática]]></title>
+      <url>http://blog.melhore.me/2016/03/22/Angular-Material-Aprendendo-atraves-da-pratica/</url>
+      <content type="html"><![CDATA[<p><img src="/2016/03/22/Angular-Material-Aprendendo-atraves-da-pratica/angular-material-top.png" alt=""></p>
+<p>Esta é uma postagem sobre minha apresentação, na qual tive a finalidade e o cuidado em demonstrar, com bastante prática alguns dos principais conceitos que regem o Angular Material, e ao fim, ter uma simples, porém funcional página de protótipo. Demonstrando como que é possível (em minutos, no caso) apresentar algo muito fiel ao produto final, ao mesmo passo que salva bastante do seu tempo, por poder reaproveitar todo o código do protótipo, na etapa de desenvolvimento.</p>
+<p>O repositório está em meu github: <a href="https://github.com/rauleite/angular-material-prototipo" target="_blank" rel="external">https://github.com/rauleite/angular-material-prototipo</a></p>
+<h1 id="Workshop-Angular-Material"><a href="#Workshop-Angular-Material" class="headerlink" title="Workshop Angular Material"></a>Workshop Angular Material</h1><p>Descobrindo na prática porque desenvolvedores e clientes ficam mais felizes com Angular Material  ｡◕‿‿◕｡</p>
+<h2 id="Step-0-Preparando-ambiente"><a href="#Step-0-Preparando-ambiente" class="headerlink" title="Step 0 - Preparando ambiente"></a>Step 0 - Preparando ambiente</h2><p>Caso ainda não tenha o Node Package Manager instalado: <br><br><a href="https://nodejs.org/en/download/package-manager" target="_blank" rel="external">https://nodejs.org/en/download/package-manager</a> </p>
+<p>ou para instalar com Node Virtual Manager: <br><br><a href="https://github.com/creationix/nvm#install-script" target="_blank" rel="external">https://github.com/creationix/nvm#install-script</a> </p>
+<p><em>ps. talvez precise usar o npm como super user (como ‘sudo npm’);</em> <br><br><em>(embora não seja recomendado não interfere nos propósitos deste tutorial)</em> </p>
+<h4 id="Clonando-o-projeto"><a href="#Clonando-o-projeto" class="headerlink" title="Clonando o projeto"></a>Clonando o projeto</h4><p><code>git clone https://github.com/raul010/angular-material-prototipo.git</code> </p>
+<p><code>cd angular-material-prototipo</code> </p>
+<h4 id="Install-Dependencies"><a href="#Install-Dependencies" class="headerlink" title="Install Dependencies"></a>Install Dependencies</h4><p><code>npm install</code></p>
+<h4 id="Start-Server"><a href="#Start-Server" class="headerlink" title="Start Server"></a>Start Server</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br><span class="line"></span><br><span class="line">* Listening port 3000...</span><br></pre></td></tr></table></figure>
+<p>Abra: <a href="http://localhost:3000" target="_blank" rel="external">http://localhost:3000</a></p>
+<p>Pronto, você já tem o projeto inteiro em mãos. Agora se quiser ir observando o<br>passo a passo, com mais calma, basta ir dando o chekout e observando o<br>que foi incluído. Conforme os passos mais abaixo.</p>
+<p>Qualquer dúvida, ou feedback é bem vindo:</p>
+<p><a href="mailto:raul@melhoreme.me?Subject=WS_ng-Material" target="_blank" rel="external">raul@melhore.me</a></p>
+<p><a href="https://twitter.com/rauleite" title="Meu Twitter" target="_blank" rel="external">@rauleite</a></p>
+<p><a href="https://www.linkedin.com/in/rauleite" title="Meu Linkedin" target="_blank" rel="external">in/rauleite</a></p>
+<h2 id="Step-1-Hello-Angular"><a href="#Step-1-Hello-Angular" class="headerlink" title="Step 1 - Hello Angular"></a>Step 1 - Hello Angular</h2><p><code>git checkout -f step-001</code> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br><span class="line"></span><br><span class="line">* Listening port 3000...</span><br></pre></td></tr></table></figure>
+<p>Abra: <a href="http://localhost:3000" target="_blank" rel="external">http://localhost:3000</a></p>
+<h2 id="Step-2-Hello-Angular-Material-Toolbar"><a href="#Step-2-Hello-Angular-Material-Toolbar" class="headerlink" title="Step 2 - Hello Angular Material - Toolbar"></a>Step 2 - Hello Angular Material - Toolbar</h2><p>Mesmos passos, apenas alternado de ‘step-001’, para ‘step-002’:</p>
+<p><code>git checkout -f step-002</code> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br><span class="line"></span><br><span class="line">* Listening port 3000...</span><br></pre></td></tr></table></figure>
+<h2 id="Step-3-Tema"><a href="#Step-3-Tema" class="headerlink" title="Step 3 - Tema"></a>Step 3 - Tema</h2><p><code>git checkout -f step-003</code> </p>
+<p><code>npm start</code></p>
+<h2 id="Step-4-Layout"><a href="#Step-4-Layout" class="headerlink" title="Step 4 - Layout"></a>Step 4 - Layout</h2><p><code>git checkout -f step-004</code> </p>
+<p><code>npm start</code></p>
+<h2 id="Step-5-Resposividade"><a href="#Step-5-Resposividade" class="headerlink" title="Step 5 - Resposividade"></a>Step 5 - Resposividade</h2><p><code>git checkout -f step-005</code></p>
+<p><code>npm start</code></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo: Framework Blog para Node.js]]></title>
       <url>http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/</url>
       <content type="html"><![CDATA[<p><img src="/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-logo.png" alt="ScreenShot"></p>
