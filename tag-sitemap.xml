@@ -23,13 +23,6 @@
     </url>
 
     <url>
-        <loc>http://blog.melhore.me/tags/javascript/</loc>
-        <lastmod>2016-03-23T14:46:06.747Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://blog.melhore.me/tags/angular/</loc>
         <lastmod>2016-03-23T14:46:06.747Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -51,6 +44,13 @@
     </url>
 
     <url>
+        <loc>http://blog.melhore.me/tags/javascript/</loc>
+        <lastmod>2016-03-23T14:46:06.747Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://blog.melhore.me/tags/html5/</loc>
         <lastmod>2016-03-23T14:46:06.747Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -60,6 +60,34 @@
     <url>
         <loc>http://blog.melhore.me/tags/css3/</loc>
         <lastmod>2016-03-23T14:46:06.747Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blog.melhore.me/tags/travis/</loc>
+        <lastmod>2016-04-08T01:26:24.568Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blog.melhore.me/tags/docker/</loc>
+        <lastmod>2016-04-08T01:26:24.568Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blog.melhore.me/tags/tests/</loc>
+        <lastmod>2016-04-08T01:26:24.568Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blog.melhore.me/tags/chrome/</loc>
+        <lastmod>2016-04-08T01:26:24.568Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -4,6 +4,34 @@
   
     
     <entry>
+      <title><![CDATA[Travis com Docker, Testes e Chrome]]></title>
+      <url>http://blog.melhore.me/2016/04/07/Travis-com-Docker-Testes-e-Chrome/</url>
+      <content type="html"><![CDATA[<p>Recentemente me deparei com alguns desafios e armadilhas para rodar os meus testes “End to End”, no ambiente sem GUI como o Docker, e a instância do próprio Travis. </p>
+<p>O Browser é naturalmente necessário pra simular a interação do usuário no caso de testes e2e, mas também para os testes unitários, uma vez que no meu caso estava utilizando Karma localmente, configurado para rodar em browser e eu queria manter o ambiente homogêneo, ao do CI (Integração Contínua).</p>
+<p>Em momento oportuno, gostaria de escrever com mais calma sobre a integração Travis, Docker, Mongo e Node, mas o desafio maior foi como rodar o Browser no ambiente Docker e Travis.</p>
+<h2 id="Alternativas"><a href="#Alternativas" class="headerlink" title="Alternativas"></a>Alternativas</h2><p>Por opção pessoal preferi partir de uma imagem <em>ubuntu</em>, como base no Dockerfile. Mas é bom saber, que existem algumas imagens que possuem Selenium e Chrome já pré configuradas pelo docker hub, porém eu não cheguei a testá-las. Se você optar por estas, talvez possa pular algumas configurações abaixo. Agora, se você é igual eu, que gosta de ter controle total “da sua imagem” (em qualquer sentido que queira interpretar), vamos ao passo a passo:</p>
+<h2 id="Java-e-Chrome"><a href="#Java-e-Chrome" class="headerlink" title="Java e Chrome"></a>Java e Chrome</h2><figure class="highlight bash"><figcaption><span>Dockerfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Necessário para Selenium</span></span><br><span class="line">ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-amd64</span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">RUN apt-get install -y --force-yes openjdk-7-jdk --no-install-recommends</span><br></pre></td></tr></table></figure>
+<p>Deixarei aqui também, a maneira que instalei o Chrome e suas dependências:</p>
+<figure class="highlight bash"><figcaption><span>Dockerfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  </span><br><span class="line">RUN dpkg -i google-chrome*.deb || <span class="literal">true</span></span><br><span class="line">RUN apt-get install <span class="_">-f</span> -y</span><br></pre></td></tr></table></figure>
+<p>Se tentar rodar agora, dará erro, pois o sistema tentará abrir o Browser (graficamente), e não vai conseguir.</p>
+<h2 id="X-virtual-framebuffer"><a href="#X-virtual-framebuffer" class="headerlink" title="X virtual framebuffer"></a>X virtual framebuffer</h2><p><a href="http://www.x.org/archive/X11R7.6/doc/man/man1/Xvfb.1.xhtml" target="_blank" rel="external">X virtual framebuffer, ou Xvfb</a>, é um display server que implementa o protocolo X11. Em contraste com outros display servers, Xvfb realiza todas as operações gráficas em memória sem apresentar qualquer saída de tela.</p>
+<p>Ou seja, este é o ponto principal deste post. Graças ao Xvfb, será possível rodar o nosso Chrome que acabamos de instalar, em memória, sem necessidade de representação gráfica.</p>
+<figure class="highlight bash"><figcaption><span>Dockerfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Configura a porta display que o terminal, deve usar</span></span><br><span class="line">ENV DISPLAY <span class="string">":99.0"</span></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">RUN apt-get install -y --no-install-recommends \</span><br><span class="line">	xfonts-base \</span><br><span class="line">	xvfb</span><br></pre></td></tr></table></figure>
+<h2 id="Travis"><a href="#Travis" class="headerlink" title="Travis"></a>Travis</h2><p>No <em>.travis.yml</em>, eu precisei fazer algumas configurações, as de exportar o Display, e o comando de chamar o Xvfb, eu <strong>precisei</strong> repetir no container e no ambiente <em>travis</em>.</p>
+<pre><code class="bash"><span class="comment"># ...</span>
+<span class="built_in">export</span> DISPLAY=:99.0
+Xvfb :99.0 -extension RANDR &gt; /dev/null &amp;
+docker <span class="built_in">exec</span> <span class="_">-d</span> -it meuContainer Xvfb :99.0 -extension RANDR
+<span class="comment"># Talvez você queira colocar alguma lógica pra saber quando o servidor Xvfb está de pé,</span>
+<span class="comment"># pra poder seguir pra próxima linha, ou então usar o simples sleep como abaixo. Dez segundos estaria ótimo.</span>
+sleep 10
+<span class="comment">#...</span>
+</code></pre>
+<p>Se você, está enfrentando ou já enfrentou este tipo de problema na integração, ou se ficou alguma dúvida, não deixe de dar aquela comentada.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Angular Material: Aprendendo através da prática]]></title>
       <url>http://blog.melhore.me/2016/03/22/Angular-Material-Aprendendo-atraves-da-pratica/</url>
       <content type="html"><![CDATA[<p>Descobrindo na prática porque desenvolvedores e clientes ficam mais felizes com Angular Material  ｡◕‿‿◕｡</p>

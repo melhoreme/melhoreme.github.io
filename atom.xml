@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.melhore.me/"/>
-  <updated>2016-03-23T14:46:06.747Z</updated>
+  <updated>2016-04-08T01:26:24.568Z</updated>
   <id>http://blog.melhore.me/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Travis com Docker, Testes e Chrome</title>
+    <link href="http://blog.melhore.me/2016/04/07/Travis-com-Docker-Testes-e-Chrome/"/>
+    <id>http://blog.melhore.me/2016/04/07/Travis-com-Docker-Testes-e-Chrome/</id>
+    <published>2016-04-07T22:45:20.000Z</published>
+    <updated>2016-04-08T01:26:24.568Z</updated>
+    
+    <content type="html">&lt;p&gt;Recentemente me deparei com alguns desafios e armadilhas para rodar os meus testes “End to End”, no ambiente sem GUI como o Docker, e a instância do próprio Travis. &lt;/p&gt;
+&lt;p&gt;O Browser é naturalmente necessário pra simular a interação do usuário no caso de testes e2e, mas também para os testes unitários, uma vez que no meu caso estava utilizando Karma localmente, configurado para rodar em browser e eu queria manter o ambiente homogêneo, ao do CI (Integração Contínua).&lt;/p&gt;
+&lt;p&gt;Em momento oportuno, gostaria de escrever com mais calma sobre a integração Travis, Docker, Mongo e Node, mas o desafio maior foi como rodar o Browser no ambiente Docker e Travis.&lt;/p&gt;
+&lt;h2 id=&quot;Alternativas&quot;&gt;&lt;a href=&quot;#Alternativas&quot; class=&quot;headerlink&quot; title=&quot;Alternativas&quot;&gt;&lt;/a&gt;Alternativas&lt;/h2&gt;&lt;p&gt;Por opção pessoal preferi partir de uma imagem &lt;em&gt;ubuntu&lt;/em&gt;, como base no Dockerfile. Mas é bom saber, que existem algumas imagens que possuem Selenium e Chrome já pré configuradas pelo docker hub, porém eu não cheguei a testá-las. Se você optar por estas, talvez possa pular algumas configurações abaixo. Agora, se você é igual eu, que gosta de ter controle total “da sua imagem” (em qualquer sentido que queira interpretar), vamos ao passo a passo:&lt;/p&gt;
+&lt;h2 id=&quot;Java-e-Chrome&quot;&gt;&lt;a href=&quot;#Java-e-Chrome&quot; class=&quot;headerlink&quot; title=&quot;Java e Chrome&quot;&gt;&lt;/a&gt;Java e Chrome&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;figcaption&gt;&lt;span&gt;Dockerfile&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Necessário para Selenium&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-amd64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RUN apt-get install -y --force-yes openjdk-7-jdk --no-install-recommends&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Deixarei aqui também, a maneira que instalei o Chrome e suas dependências:&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;figcaption&gt;&lt;span&gt;Dockerfile&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RUN dpkg -i google-chrome*.deb || &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RUN apt-get install &lt;span class=&quot;_&quot;&gt;-f&lt;/span&gt; -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Se tentar rodar agora, dará erro, pois o sistema tentará abrir o Browser (graficamente), e não vai conseguir.&lt;/p&gt;
+&lt;h2 id=&quot;X-virtual-framebuffer&quot;&gt;&lt;a href=&quot;#X-virtual-framebuffer&quot; class=&quot;headerlink&quot; title=&quot;X virtual framebuffer&quot;&gt;&lt;/a&gt;X virtual framebuffer&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.x.org/archive/X11R7.6/doc/man/man1/Xvfb.1.xhtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;X virtual framebuffer, ou Xvfb&lt;/a&gt;, é um display server que implementa o protocolo X11. Em contraste com outros display servers, Xvfb realiza todas as operações gráficas em memória sem apresentar qualquer saída de tela.&lt;/p&gt;
+&lt;p&gt;Ou seja, este é o ponto principal deste post. Graças ao Xvfb, será possível rodar o nosso Chrome que acabamos de instalar, em memória, sem necessidade de representação gráfica.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;figcaption&gt;&lt;span&gt;Dockerfile&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Configura a porta display que o terminal, deve usar&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ENV DISPLAY &lt;span class=&quot;string&quot;&gt;&quot;:99.0&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RUN apt-get install -y --no-install-recommends \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	xfonts-base \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	xvfb&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Travis&quot;&gt;&lt;a href=&quot;#Travis&quot; class=&quot;headerlink&quot; title=&quot;Travis&quot;&gt;&lt;/a&gt;Travis&lt;/h2&gt;&lt;p&gt;No &lt;em&gt;.travis.yml&lt;/em&gt;, eu precisei fazer algumas configurações, as de exportar o Display, e o comando de chamar o Xvfb, eu &lt;strong&gt;precisei&lt;/strong&gt; repetir no container e no ambiente &lt;em&gt;travis&lt;/em&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# ...&lt;/span&gt;
+&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; DISPLAY=:99.0
+Xvfb :99.0 -extension RANDR &amp;gt; /dev/null &amp;amp;
+docker &lt;span class=&quot;built_in&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;_&quot;&gt;-d&lt;/span&gt; -it meuContainer Xvfb :99.0 -extension RANDR
+&lt;span class=&quot;comment&quot;&gt;# Talvez você queira colocar alguma lógica pra saber quando o servidor Xvfb está de pé,&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# pra poder seguir pra próxima linha, ou então usar o simples sleep como abaixo. Dez segundos estaria ótimo.&lt;/span&gt;
+sleep 10
+&lt;span class=&quot;comment&quot;&gt;#...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Se você, está enfrentando ou já enfrentou este tipo de problema na integração, ou se ficou alguma dúvida, não deixe de dar aquela comentada.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Recentemente me deparei com alguns desafios e armadilhas para rodar os meus testes “End to End”, no ambiente sem GUI como o Docker, e a i
+    
+    </summary>
+    
+      <category term="Continuous Integration" scheme="http://blog.melhore.me/categories/Continuous-Integration/"/>
+    
+      <category term="travis" scheme="http://blog.melhore.me/categories/Continuous-Integration/travis/"/>
+    
+    
+      <category term="travis" scheme="http://blog.melhore.me/tags/travis/"/>
+    
+      <category term="docker" scheme="http://blog.melhore.me/tags/docker/"/>
+    
+      <category term="tests" scheme="http://blog.melhore.me/tags/tests/"/>
+    
+      <category term="chrome" scheme="http://blog.melhore.me/tags/chrome/"/>
+    
+  </entry>
   
   <entry>
     <title>Angular Material: Aprendendo através da prática</title>
@@ -99,13 +151,13 @@
       <category term="Web Components" scheme="http://blog.melhore.me/categories/Javascript/Front-end/Web-Components/"/>
     
     
-      <category term="javascript" scheme="http://blog.melhore.me/tags/javascript/"/>
-    
       <category term="angular" scheme="http://blog.melhore.me/tags/angular/"/>
     
       <category term="angular material" scheme="http://blog.melhore.me/tags/angular-material/"/>
     
       <category term="material design" scheme="http://blog.melhore.me/tags/material-design/"/>
+    
+      <category term="javascript" scheme="http://blog.melhore.me/tags/javascript/"/>
     
       <category term="html5" scheme="http://blog.melhore.me/tags/html5/"/>
     

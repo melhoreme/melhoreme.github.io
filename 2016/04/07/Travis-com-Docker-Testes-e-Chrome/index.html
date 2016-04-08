@@ -4,22 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hexo: Framework Blog para Node.js | Melhore.me</title>
+  <title>Travis com Docker, Testes e Chrome | Melhore.me</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Static Site GeneratorsAntes das minhas atenções estarem voltadas aos badalados “Static Site Generators”, para criação de blogs geralmente baseados em Markdown, eu utilizava o velho Wordpress. Já vinh">
+  <meta name="description" content="Recentemente me deparei com alguns desafios e armadilhas para rodar os meus testes “End to End”, no ambiente sem GUI como o Docker, e a instância do próprio Travis. 
+O Browser é naturalmente necessári">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo: Framework Blog para Node.js">
-<meta property="og:url" content="http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/index.html">
+<meta property="og:title" content="Travis com Docker, Testes e Chrome">
+<meta property="og:url" content="http://blog.melhore.me/2016/04/07/Travis-com-Docker-Testes-e-Chrome/index.html">
 <meta property="og:site_name" content="Melhore.me">
-<meta property="og:description" content="Static Site GeneratorsAntes das minhas atenções estarem voltadas aos badalados “Static Site Generators”, para criação de blogs geralmente baseados em Markdown, eu utilizava o velho Wordpress. Já vinh">
-<meta property="og:image" content="http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-logo.png">
-<meta property="og:image" content="http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-themes.png">
-<meta property="og:image" content="http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-chinese.png">
-<meta property="og:updated_time" content="2016-03-22T17:18:26.146Z">
+<meta property="og:description" content="Recentemente me deparei com alguns desafios e armadilhas para rodar os meus testes “End to End”, no ambiente sem GUI como o Docker, e a instância do próprio Travis. 
+O Browser é naturalmente necessári">
+<meta property="og:updated_time" content="2016-04-08T01:26:24.568Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo: Framework Blog para Node.js">
-<meta name="twitter:description" content="Static Site GeneratorsAntes das minhas atenções estarem voltadas aos badalados “Static Site Generators”, para criação de blogs geralmente baseados em Markdown, eu utilizava o velho Wordpress. Já vinh">
-<meta name="twitter:image" content="http://blog.melhore.me/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-logo.png">
+<meta name="twitter:title" content="Travis com Docker, Testes e Chrome">
+<meta name="twitter:description" content="Recentemente me deparei com alguns desafios e armadilhas para rodar os meus testes “End to End”, no ambiente sem GUI como o Docker, e a instância do próprio Travis. 
+O Browser é naturalmente necessári">
   
     <link rel="alternative" href="/atom.xml" title="Melhore.me" type="application/atom+xml">
   
@@ -166,11 +165,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Hexo-Framework-Blog-para-Nodejs" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Travis-com-Docker-Testes-e-Chrome" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/21/Hexo-Framework-Blog-para-Nodejs/" class="article-date">
-  	<time datetime="2016-03-22T01:22:37.000Z" itemprop="datePublished">21-03-2016</time>
+      <a href="/2016/04/07/Travis-com-Docker-Testes-e-Chrome/" class="article-date">
+  	<time datetime="2016-04-07T22:45:20.000Z" itemprop="datePublished">07-04-2016</time>
 </a>
     </div>
   
@@ -183,7 +182,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo: Framework Blog para Node.js
+      Travis com Docker, Testes e Chrome
     </h1>
   
 
@@ -192,12 +191,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tests/">tests</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/travis/">travis</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Javascript/">Javascript</a><a class="article-category-link" href="/categories/Javascript/Full-stack/">Full-stack</a><a class="article-category-link" href="/categories/Javascript/Full-stack/Node-js/">Node.js</a>
+	<a class="article-category-link" href="/categories/Continuous-Integration/">Continuous Integration</a><a class="article-category-link" href="/categories/Continuous-Integration/travis/">travis</a>
 	</div>
 
 
@@ -207,20 +206,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-logo.png" alt="ScreenShot"></p>
-<h2 id="Static-Site-Generators"><a href="#Static-Site-Generators" class="headerlink" title="Static Site Generators"></a>Static Site Generators</h2><p>Antes das minhas atenções estarem voltadas aos badalados “Static Site Generators”, para criação de blogs geralmente baseados em <a href="http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html" target="_blank" rel="external">Markdown</a>, eu utilizava o velho Wordpress. Já vinha há um tempo saturado da plataforma, e agora finalmente pude voltar um pouco da minha atenção à eles.</p>
-<p>Os generators fornecem todo o controle que você precisa para criar, gerenciar e, claro… gerar artefatos para o seu blog, via <a href="https://hexo.io/docs/commands.html" target="_blank" rel="external">linha de comando</a>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"Post metalinguístico sobre Hexo"</span></span><br></pre></td></tr></table></figure>
-<p>Lista mais completas dos Static Generators, caso tenha curiosidade: <a href="https://www.staticgen.com" target="_blank" rel="external">https://www.staticgen.com</a></p>
-<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Olhei e testei repidamente alguns, com o critério inicial que rodasse em Node.js. Dentre eles principalmente o Heckle (Jekyll pra Node, ao invés de Ruby) e Poet, além do próprio <a href="https://hexo.io/" target="_blank" rel="external">Hexo.io</a>. Optei pelo último por parecer mais maduro, robusto, e atualmente possuir um constante ciclo de releases. </p>
-<h2 id="Pros"><a href="#Pros" class="headerlink" title="Prós"></a>Prós</h2><p><img src="/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-themes.png" alt=""></p>
-<p>Possui um bom suporte a <a href="https://hexo.io/themes/" target="_blank" rel="external">temas</a> e <a href="https://hexo.io/docs/plugins.html" target="_blank" rel="external">plugins</a> de terceiros, open source. Além de poder incluir novas features, ele é 100% customizável, de fácil alteração e manuseio através do fonte. E como falei, em constantes releases.</p>
-<h2 id="Contra"><a href="#Contra" class="headerlink" title="Contra"></a>Contra</h2><p><img src="/2016/03/21/Hexo-Framework-Blog-para-Nodejs/hexo-chinese.png" alt=""></p>
-<p>Mas como nem tudo são flores, ressalto um nítido inconveniente. Ele tem um apelo muito grande na China. Embora o código fonte, documentação oficial etc, seja toda em inglês, existe uma comunidade ativa muito grande na web, entre os chineses. Como vimos nas aulas de Geografia (ou não) chineses não se preocupam lá tanto em utilizar a língua inglesa, como por exemplo nós brasileiros fazemos. Isto se não for pelo contrário, realmente fazem questão de não usar, utilizando por sua vez ideogramas (谷歌翻譯). Portanto, não estranhe no caso de você googlear sobre o ‘Hexo’ e se deparar com alguns ideogramas, ou mesmo em meio à comentários do fonte de algum plugin ou tema. No entanto, a aplicação é simples, é provável que você nem vá precisar traduzir algo ou tentar ler, mas em último caso, pode apelar ao google translate mesmo.</p>
-<h2 id="Nuvem"><a href="#Nuvem" class="headerlink" title="Nuvem"></a>Nuvem</h2><p>Bom suporte à teste local, com autoreload e deploy em nuvem melhor ainda. No meu caso, estou hospedando no próprio Github e configurei o Hexo pra fazer o deploy direto lá. Também pode ser facilmente ‘deployado’ para Heroku, OpenShift, S3 da Amazon <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">entre outros</a>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- type: git</span><br><span class="line">  repo:</span><br><span class="line">- type: heroku</span><br><span class="line">  repo:</span><br></pre></td></tr></table></figure>
-<h2 id="Trocando-em-Miudos"><a href="#Trocando-em-Miudos" class="headerlink" title="Trocando em Miúdos"></a>Trocando em Miúdos</h2><p>Bem cruzando prós e contras, eu optei pelo Hexo, claro que ainda é cedo para uma conclusão definitiva, mas pelo menos comparado ao Wordpress que é o que eu costumava usar, claro que já é possível dizer sem medo de errar que é muito melhor, ágil e divertido trabalhar com Hexo e Node na máquina, do que Wordpress e PHP no browser. Também prevaleceu sobre os outros que rodam em Node, pois sua frequência de releases e comunidade, mesmo considerando o inconveniente citado, é muito maior.</p>
+        <p>Recentemente me deparei com alguns desafios e armadilhas para rodar os meus testes “End to End”, no ambiente sem GUI como o Docker, e a instância do próprio Travis. </p>
+<p>O Browser é naturalmente necessário pra simular a interação do usuário no caso de testes e2e, mas também para os testes unitários, uma vez que no meu caso estava utilizando Karma localmente, configurado para rodar em browser e eu queria manter o ambiente homogêneo, ao do CI (Integração Contínua).</p>
+<p>Em momento oportuno, gostaria de escrever com mais calma sobre a integração Travis, Docker, Mongo e Node, mas o desafio maior foi como rodar o Browser no ambiente Docker e Travis.</p>
+<h2 id="Alternativas"><a href="#Alternativas" class="headerlink" title="Alternativas"></a>Alternativas</h2><p>Por opção pessoal preferi partir de uma imagem <em>ubuntu</em>, como base no Dockerfile. Mas é bom saber, que existem algumas imagens que possuem Selenium e Chrome já pré configuradas pelo docker hub, porém eu não cheguei a testá-las. Se você optar por estas, talvez possa pular algumas configurações abaixo. Agora, se você é igual eu, que gosta de ter controle total “da sua imagem” (em qualquer sentido que queira interpretar), vamos ao passo a passo:</p>
+<h2 id="Java-e-Chrome"><a href="#Java-e-Chrome" class="headerlink" title="Java e Chrome"></a>Java e Chrome</h2><figure class="highlight bash"><figcaption><span>Dockerfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Necessário para Selenium</span></span><br><span class="line">ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-amd64</span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">RUN apt-get install -y --force-yes openjdk-7-jdk --no-install-recommends</span><br></pre></td></tr></table></figure>
+<p>Deixarei aqui também, a maneira que instalei o Chrome e suas dependências:</p>
+<figure class="highlight bash"><figcaption><span>Dockerfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  </span><br><span class="line">RUN dpkg -i google-chrome*.deb || <span class="literal">true</span></span><br><span class="line">RUN apt-get install <span class="_">-f</span> -y</span><br></pre></td></tr></table></figure>
+<p>Se tentar rodar agora, dará erro, pois o sistema tentará abrir o Browser (graficamente), e não vai conseguir.</p>
+<h2 id="X-virtual-framebuffer"><a href="#X-virtual-framebuffer" class="headerlink" title="X virtual framebuffer"></a>X virtual framebuffer</h2><p><a href="http://www.x.org/archive/X11R7.6/doc/man/man1/Xvfb.1.xhtml" target="_blank" rel="external">X virtual framebuffer, ou Xvfb</a>, é um display server que implementa o protocolo X11. Em contraste com outros display servers, Xvfb realiza todas as operações gráficas em memória sem apresentar qualquer saída de tela.</p>
+<p>Ou seja, este é o ponto principal deste post. Graças ao Xvfb, será possível rodar o nosso Chrome que acabamos de instalar, em memória, sem necessidade de representação gráfica.</p>
+<figure class="highlight bash"><figcaption><span>Dockerfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Configura a porta display que o terminal, deve usar</span></span><br><span class="line">ENV DISPLAY <span class="string">":99.0"</span></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">RUN apt-get install -y --no-install-recommends \</span><br><span class="line">	xfonts-base \</span><br><span class="line">	xvfb</span><br></pre></td></tr></table></figure>
+<h2 id="Travis"><a href="#Travis" class="headerlink" title="Travis"></a>Travis</h2><p>No <em>.travis.yml</em>, eu precisei fazer algumas configurações, as de exportar o Display, e o comando de chamar o Xvfb, eu <strong>precisei</strong> repetir no container e no ambiente <em>travis</em>.</p>
+<pre><code class="bash"><span class="comment"># ...</span>
+<span class="built_in">export</span> DISPLAY=:99.0
+Xvfb :99.0 -extension RANDR &gt; /dev/null &amp;
+docker <span class="built_in">exec</span> <span class="_">-d</span> -it meuContainer Xvfb :99.0 -extension RANDR
+<span class="comment"># Talvez você queira colocar alguma lógica pra saber quando o servidor Xvfb está de pé,</span>
+<span class="comment"># pra poder seguir pra próxima linha, ou então usar o simples sleep como abaixo. Dez segundos estaria ótimo.</span>
+sleep 10
+<span class="comment">#...</span>
+</code></pre>
+<p>Se você, está enfrentando ou já enfrentou este tipo de problema na integração, ou se ficou alguma dúvida, não deixe de dar aquela comentada.</p>
 
       
     </div>
@@ -230,15 +237,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/22/Angular-Material-Aprendendo-atraves-da-pratica/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Angular Material: Aprendendo através da prática
-        
-      </div>
-    </a>
   
+    <a href="/2016/03/22/Angular-Material-Aprendendo-atraves-da-pratica/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Angular Material: Aprendendo através da prática</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
