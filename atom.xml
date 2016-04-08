@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.melhore.me/"/>
-  <updated>2016-04-08T01:39:14.462Z</updated>
+  <updated>2016-04-08T01:46:14.293Z</updated>
   <id>http://blog.melhore.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.melhore.me/2016/04/07/Travis-com-Docker-Testes-e-Chrome/"/>
     <id>http://blog.melhore.me/2016/04/07/Travis-com-Docker-Testes-e-Chrome/</id>
     <published>2016-04-07T22:45:20.000Z</published>
-    <updated>2016-04-08T01:39:14.462Z</updated>
+    <updated>2016-04-08T01:46:14.293Z</updated>
     
     <content type="html">&lt;p&gt;Recentemente me deparei com alguns desafios e armadilhas para rodar os meus testes “End to End”, no ambiente sem GUI como o Docker, e a instância do próprio Travis. &lt;/p&gt;
 &lt;p&gt;O Browser é naturalmente necessário pra simular a interação do usuário no caso de testes e2e, mas também para os testes unitários, uma vez que no meu caso estava utilizando Karma localmente, configurado para rodar em browser e eu queria manter o ambiente homogêneo, ao do CI (Integração Contínua).&lt;/p&gt;
@@ -43,7 +43,7 @@ docker &lt;span class=&quot;built_in&quot;&gt;exec&lt;/span&gt; &lt;span class=&
 sleep 10
 &lt;span class=&quot;comment&quot;&gt;#...&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Se você, está enfrentando ou já enfrentou este tipo de problema na integração, ou se ficou alguma dúvida, não deixe de dar aquela comentada.&lt;/p&gt;
+&lt;p&gt;Se você, está enfrentando ou já enfrentou este tipo de problema na integração, ou se ficou alguma dúvida, não deixe de dar aquela comentada. Até mais!&lt;/p&gt;
 </content>
     
     <summary type="html">
